@@ -1,0 +1,5 @@
+fn_args_layout = "Vertical"
+match_arm_leading_pipes = "Always"
+match_block_trailing_comma = true
+newline_style = "Unix"
+tab_spaces = 2
