@@ -1,0 +1,19 @@
+[package]
+name = "sermo"
+version = "0.1.0"
+authors = ["Kotokaze <62094392+kotokaze@users.noreply.github.com>"]
+edition = "2021"
+description = "Serial monitor in Rust"
+readme = "README.md"
+repository = "https://github.com/kotokaze/sermo.git"
+license-file = "../../LICENSE"
+
+[[bin]]
+name = "sermo"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.0.18", features = ["derive"] }
+sermo_core = { path = "../core"}
