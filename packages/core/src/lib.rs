@@ -3,7 +3,7 @@ use std::io;
 use std::time::Duration;
 
 pub fn open_port(
-  port: &String,
+  port: std::borrow::Cow<'_, str>,
   baud: u32,
 ) -> Result<Box<dyn SerialPort>, serialport::Error> {
   let port = new(port, baud)

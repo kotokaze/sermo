@@ -11,7 +11,7 @@ fn main() {
   let device = cli.device.into_os_string();
   println!("Selected device: {:?}", device);
 
-  let mut port = open_port(&device.into_string().unwrap(), cli.baud).unwrap();
+  let mut port = open_port(device.to_string_lossy(), cli.baud).unwrap();
   println!("Opened port: {:?}", port.name());
 
   print_serial(&mut port).unwrap();

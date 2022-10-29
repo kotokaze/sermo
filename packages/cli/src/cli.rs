@@ -1,5 +1,4 @@
 use clap::{Parser, Subcommand};
-use std::path::PathBuf;
 
 #[derive(Subcommand)]
 pub enum Commands {}
@@ -8,7 +7,7 @@ pub enum Commands {}
 #[command(author, version, about, long_about = None)] // Read from `Cargo.toml`
 pub struct Cli {
   #[arg(short, long, help = "The path to the device file")]
-  pub device: PathBuf,
+  pub device: std::path::PathBuf,
 
   #[arg(short, long, help = "The baud rate to use")]
   pub baud: u32,
